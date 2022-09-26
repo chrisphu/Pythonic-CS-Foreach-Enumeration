@@ -37,5 +37,5 @@ foreach (var (index, value) in values.Enumerate())
 ```
 
 ## Miscellaneous
-Normally I would name the static class `Utils.cs` instead of `ArrayExtension.cs`; and also abbreviate index, value, and values as i, v, vs (consequently indexesValues as ivs).
+Normally I would name the static class `Utils.cs` instead of `ArrayExtension.cs`; and also abbreviate index, value, and values as i, v, and vs (consequently indexesValues as ivs).
 Is this really better than looping the index range and referring to the indexed element in the array? Probably not, but I think it's pretty. 🙂
