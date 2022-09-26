@@ -8,7 +8,7 @@ public static class ArrayExtension
 		(int, T)[] indexesValues = new (int, T)[values.Count()];
 		for (int index = 0; index < values.Count(); index++)
 		{
-			ivs[index] = (index, values[index]);
+			indexesValues[index] = (index, values[index]);
 		}
 		return indexesValues;
 	}
