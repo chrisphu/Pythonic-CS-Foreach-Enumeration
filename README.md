@@ -1,15 +1,15 @@
 # Pythonic C# foreach enumeration
 This is a C# extension function for Pythonic foreach enumeration. C# snippets below assume `using System.Linq`. Extension function at [ArrayExtension.cs](ArrayExtension.cs).
 
-## Python 'foreach'
-Python allows easy access to current loop index by enumerating the looped array.
+## Python 'foreach' enumeration
+Python allows easy access to current loop index by calling intrinsic enumerate function on looped array.
 ```py
 for index, value in enumerate(values):
 	# index and value called easily
 	print(index, value)
 ```
 
-## How is it currently done in C#?
+## How is index currently accessed in C#?
 Either loop index range and refer to indexed element in array (reasonably clean):
 ```cs
 for (int index = 0; index < values.Count(); index++)
