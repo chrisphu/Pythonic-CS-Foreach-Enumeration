@@ -1,6 +1,6 @@
 using System.Linq;
 
-public static class Utils
+public static class ArrayExtension
 {
 	// C# 7.0 and later, otherwise use Tuple<int, T> and Tuple.Create()
 	public static (int, T)[] Enumerate<T>(this T[] values)
