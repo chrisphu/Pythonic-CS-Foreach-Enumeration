@@ -8,7 +8,7 @@ public static class Example
 
 		foreach(var (index, value) in values.Enumerate())
 		{
-			//
+			// index and value called easily
 		}
 	}
 }
