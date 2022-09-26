@@ -1,3 +1,5 @@
+using ArrayExtension;
+
 public static class Example
 {
 	public static void Main()
