@@ -37,5 +37,9 @@ foreach (var (index, value) in values.Enumerate())
 ```
 
 ## Miscellaneous
-Normally I would name the static class `Utils.cs` instead of `ArrayExtension.cs`; and also abbreviate index, value, and values as i, v, and vs (consequently indexesValues as ivs).
-Is this really better than looping the index range and referring to the indexed element in the array? Probably not, but I think it's pretty. 🙂
+* Normally I would name the static class `Utils.cs` instead of `ArrayExtension.cs`; and also abbreviate index, value, and values as i, v, and vs (consequently indexesValues as ivs).
+* Through a bit more searching, I learned after writing this that this same question was answered back in [2017 on Stack Overflow](https://stackoverflow.com/questions/7389047/is-there-an-equivalent-to-pythons-enumerate-for-net-ienumerable). Some of the key differences are:
+	* Their solution is more robust by being an IEnumerable extension rather than an array extension. This extends functionality to other IEnumerable classes such as lists.
+	* Their solution loops the input and uses `yield return` to insert an `(index, value)` per input element into their IEnumerable. In contrast, I have to start by initializing an array size and having a desired range of indexes be looped rather than looping the input itself. This is of course because my extension was written with array in mind rather than IEnumerable.
+	* Although I am content with the readability and straightforwardness of my extension, their solution is definitely more robust and is worth upgrading to if the user needs to also enumerate lists. In fact, given that the extension function backend is not seen when using `Enumerate()`, there is almost no reason not to upgrade.
+* Is this really better than looping the index range and referring to the indexed element in the array? Probably not, but I think it's pretty. 🙂
