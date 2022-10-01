@@ -5,11 +5,11 @@ public static class ArrayExtension
 	// C# 7.0 and later, otherwise use Tuple<int, T> and Tuple.Create()
 	public static (int, T)[] Enumerate<T>(this T[] values)
 	{
-		(int, T)[] indexesValues = new (int, T)[values.Count()];
+		(int, T)[] indexValueTuples = new (int, T)[values.Count()];
 		for (int index = 0; index < values.Count(); index++)
 		{
-			indexesValues[index] = (index, values[index]);
+			indexValueTuples[index] = (index, values[index]);
 		}
-		return indexesValues;
+		return indexValueTuples;
 	}
 }
