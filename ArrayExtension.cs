@@ -3,13 +3,13 @@ using System.Linq;
 public static class ArrayExtension
 {
 	// C# 7.0 and later, otherwise use Tuple<int, T> and Tuple.Create()
-	public static (int, T)[] Enumerate<T>(this T[] values)
+	public static (int, T)[] Enumerate<T>(this T[] input)
 	{
-		(int, T)[] indexValueTuples = new (int, T)[values.Count()];
-		for (int index = 0; index < values.Count(); index++)
+		(int, T)[] output = new (int, T)[input.Count()];
+		for (int index = 0; index < input.Count(); index++)
 		{
-			indexValueTuples[index] = (index, values[index]);
+			output[index] = (index, input[index]);
 		}
-		return indexValueTuples;
+		return output;
 	}
 }
