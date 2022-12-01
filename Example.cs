@@ -1,4 +1,4 @@
-using ArrayExtension;
+using static ArrayExtensions;
 
 public static class Example
 {
