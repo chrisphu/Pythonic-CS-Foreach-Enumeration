@@ -8,7 +8,7 @@ public static class Example
 
 		foreach(var (index, value) in values.Enumerate())
 		{
-			// Substitute Debug.Log() if outside Unity i.e. Console.WriteLine() instead
+			// Debug.Log() for use in Unity
 			
 			Debug.Log(index);
 			// output: 0, 1, 2
