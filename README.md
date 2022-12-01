@@ -2,7 +2,7 @@
 This is a C# extension function for Pythonic foreach enumeration. C# snippets below assume `using System.Linq`. Extension function at [ArrayExtensions.cs](ArrayExtensions.cs).
 
 ## Python 'foreach' enumeration
-Python allows easy access to current loop index by calling intrinsic enumerate function on looped array.
+Python allows easy access to current loop index by calling an intrinsic enumerate function on looped array.
 ```py
 for index, value in enumerate(values):
 	# index and value called easily
@@ -14,7 +14,7 @@ Either loop index range and refer to indexed element in array (reasonably clean)
 ```cs
 for (int index = 0; index < values.Count(); index++)
 {
-	// values[index] to refer to value, or declare value = values[index]
+	// values[index] to refer to value, or declare var value = values[index]
 }
 ```
 Or declare the index outside the loop (not so much):
@@ -32,7 +32,7 @@ Like so! Also shown in [Example.cs](Example.cs).
 ```cs
 foreach (var (index, value) in values.Enumerate())
 {
-	// index and value called easily
+	// index and value now available
 }
 ```
 
